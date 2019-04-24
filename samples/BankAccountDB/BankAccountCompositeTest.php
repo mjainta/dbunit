@@ -15,7 +15,7 @@ require_once 'BankAccount.php';
  *
  * @since      Class available since Release 1.0.0
  */
-class BankAccountCompositeTest extends PHPUnit_Framework_TestCase
+class BankAccountCompositeTest extends PHPUnit\Framework\TestCase
 {
     protected $pdo;
 
@@ -44,14 +44,14 @@ class BankAccountCompositeTest extends PHPUnit_Framework_TestCase
         return $tester;
     }
 
-    protected function setUp()
-    {
+    protected function setUp():void
+{
         parent::setUp();
         $this->tester->onSetUp();
     }
 
-    protected function tearDown()
-    {
+    protected function tearDown():void
+{
         parent::tearDown();
         $this->tester->onTearDown();
     }

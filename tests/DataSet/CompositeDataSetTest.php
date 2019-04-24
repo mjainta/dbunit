@@ -11,14 +11,14 @@
 /**
  * @since      File available since Release 1.0.0
  */
-class Extensions_Database_DataSet_CompositeDataSetTest extends PHPUnit_Framework_TestCase
+class Extensions_Database_DataSet_CompositeDataSetTest extends PHPUnit\Framework\TestCase
 {
     protected $expectedDataSet1;
     protected $expectedDataSet2;
     protected $expectedDataSet3;
 
-    public function setUp()
-    {
+    public function setUp():void
+{
         $table1MetaData = new PHPUnit_Extensions_Database_DataSet_DefaultTableMetaData(
             'table1', ['table1_id', 'column1', 'column2', 'column3', 'column4']
         );

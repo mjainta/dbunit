@@ -11,15 +11,15 @@
 /**
  * @since      File available since Release 1.0.0
  */
-class Extensions_Database_DataSet_AbstractTableTest extends PHPUnit_Framework_TestCase
+class Extensions_Database_DataSet_AbstractTableTest extends PHPUnit\Framework\TestCase
 {
     /**
      * @var PHPUnit_Extensions_Database_DataSet_QueryTable
      */
     protected $table;
 
-    public function setUp()
-    {
+    public function setUp():void
+{
         $tableMetaData = new PHPUnit_Extensions_Database_DataSet_DefaultTableMetaData(
             'table', ['id', 'column1']
         );

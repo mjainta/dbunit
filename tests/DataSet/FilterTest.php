@@ -11,12 +11,12 @@
 /**
  * @since      File available since Release 1.0.0
  */
-class Extensions_Database_DataSet_FilterTest extends PHPUnit_Framework_TestCase
+class Extensions_Database_DataSet_FilterTest extends PHPUnit\Framework\TestCase
 {
     protected $expectedDataSet;
 
-    public function setUp()
-    {
+    public function setUp():void
+{
         $this->expectedDataSet = new PHPUnit_Extensions_Database_DataSet_FlatXmlDataSet(
             dirname(__FILE__) . '/../_files/XmlDataSets/FilteredTestFixture.xml'
         );

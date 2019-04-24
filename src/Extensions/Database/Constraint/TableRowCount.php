@@ -8,12 +8,14 @@
  * file that was distributed with this source code.
  */
 
+use PHPUnit\Framework\Constraint\Constraint;
+
 /**
  * Asserts the row count in a table
  *
  * @since      Class available since Release 1.0.0
  */
-class PHPUnit_Extensions_Database_Constraint_TableRowCount extends PHPUnit_Framework_Constraint
+class PHPUnit_Extensions_Database_Constraint_TableRowCount extends PHPUnit\Framework\Constraint\Constraint
 {
     /**
      * @var int
@@ -47,7 +49,7 @@ class PHPUnit_Extensions_Database_Constraint_TableRowCount extends PHPUnit_Frame
      * @param  mixed $other Value or object to evaluate.
      * @return bool
      */
-    protected function matches($other)
+    protected function matches($other): bool
     {
         return $other == $this->value;
     }
@@ -57,7 +59,7 @@ class PHPUnit_Extensions_Database_Constraint_TableRowCount extends PHPUnit_Frame
      *
      * @return string
      */
-    public function toString()
+    public function toString(): string
     {
         return sprintf('is equal to expected row count %d', $this->value);
     }

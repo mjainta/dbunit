@@ -11,7 +11,7 @@
 /**
  * @since      File available since Release 1.0.0
  */
-class Extensions_Database_DataSet_PersistorTest extends PHPUnit_Framework_TestCase
+class Extensions_Database_DataSet_PersistorTest extends PHPUnit\Framework\TestCase
 {
     public function testFlatXml()
     {

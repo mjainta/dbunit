@@ -8,12 +8,14 @@
  * file that was distributed with this source code.
  */
 
+use PHPUnit\Framework\Constraint\Constraint;
+
 /**
  * Asserts whether or not two dbunit tables are equal.
  *
  * @since      Class available since Release 1.0.0
  */
-class PHPUnit_Extensions_Database_Constraint_TableIsEqual extends PHPUnit_Framework_Constraint
+class PHPUnit_Extensions_Database_Constraint_TableIsEqual extends PHPUnit\Framework\Constraint\Constraint
 {
     /**
      * @var PHPUnit_Extensions_Database_DataSet_ITable
@@ -45,7 +47,7 @@ class PHPUnit_Extensions_Database_Constraint_TableIsEqual extends PHPUnit_Framew
      * @param  mixed $other Value or object to evaluate.
      * @return bool
      */
-    protected function matches($other)
+    protected function matches($other): bool
     {
         if (!$other instanceof PHPUnit_Extensions_Database_DataSet_ITable) {
             throw new InvalidArgumentException(
@@ -65,7 +67,7 @@ class PHPUnit_Extensions_Database_Constraint_TableIsEqual extends PHPUnit_Framew
      * @param  mixed  $other Evaluated value or object.
      * @return string
      */
-    protected function failureDescription($other)
+    protected function failureDescription($other): string
     {
         return $other->__toString() . ' ' . $this->toString();
     }
@@ -75,7 +77,7 @@ class PHPUnit_Extensions_Database_Constraint_TableIsEqual extends PHPUnit_Framew
      *
      * @return string
      */
-    public function toString()
+    public function toString(): string
     {
         return sprintf(
           'is equal to expected %s', $this->value->__toString()
