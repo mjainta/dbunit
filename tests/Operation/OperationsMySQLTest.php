@@ -16,8 +16,8 @@ require_once dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR . '_files' . DIREC
  */
 class Extensions_Database_Operation_OperationsMySQLTest extends PHPUnit_Extensions_Database_TestCase
 {
-    protected function setUp()
-    {
+    protected function setUp():void
+{
         if (!extension_loaded('pdo_mysql')) {
             $this->markTestSkipped('pdo_mysql is required to run this test.');
         }

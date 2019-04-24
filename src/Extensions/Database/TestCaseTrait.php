@@ -168,8 +168,8 @@ trait PHPUnit_Extensions_Database_TestCase_Trait
     /**
      * Performs operation returned by getSetUpOperation().
      */
-    protected function setUp()
-    {
+    protected function setUp():void
+{
         parent::setUp();
 
         $this->databaseTester = NULL;
@@ -182,8 +182,8 @@ trait PHPUnit_Extensions_Database_TestCase_Trait
     /**
      * Performs operation returned by getTearDownOperation().
      */
-    protected function tearDown()
-    {
+    protected function tearDown():void
+{
         $this->getDatabaseTester()->setTearDownOperation($this->getTearDownOperation());
         $this->getDatabaseTester()->setDataSet($this->getDataSet());
         $this->getDatabaseTester()->onTearDown();

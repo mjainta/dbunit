@@ -11,7 +11,7 @@
 /**
  * @since      File available since Release 1.0.0
  */
-class Extensions_Database_DataSet_CsvDataSetTest extends PHPUnit_Framework_TestCase
+class Extensions_Database_DataSet_CsvDataSetTest extends PHPUnit\Framework\TestCase
 {
     protected $expectedDataSet;
 

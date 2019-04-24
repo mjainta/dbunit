@@ -90,7 +90,7 @@ class PHPUnit_Extensions_Database_DataSet_XmlDataSet extends PHPUnit_Extensions_
         }
 
         catch (RuntimeException $e) {
-            throw new PHPUnit_Framework_Exception(__METHOD__ . ' called with an unwritable file.');
+            throw new PHPUnit\Framework\Exception(__METHOD__ . ' called with an unwritable file.');
         }
     }
 }

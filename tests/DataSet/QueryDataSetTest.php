@@ -33,8 +33,8 @@ class Extensions_Database_DataSet_QueryDataSetTest extends PHPUnit_Extensions_Da
         return $this->createFlatXMLDataSet(dirname(__FILE__) . '/../_files/XmlDataSets/QueryDataSetTest.xml');
     }
 
-    public function setUp()
-    {
+    public function setUp():void
+{
         $this->pdo = DBUnitTestUtility::getSQLiteMemoryDB();
         parent::setUp();
         $this->dataSet = new PHPUnit_Extensions_Database_DataSet_QueryDataSet($this->getConnection());

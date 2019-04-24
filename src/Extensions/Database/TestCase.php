@@ -14,7 +14,7 @@
  *
  * @since      Class available since Release 1.0.0
  */
-abstract class PHPUnit_Extensions_Database_TestCase extends PHPUnit_Framework_TestCase
+abstract class PHPUnit_Extensions_Database_TestCase extends PHPUnit\Framework\TestCase
 {
     use PHPUnit_Extensions_Database_TestCase_Trait;
 }

@@ -60,7 +60,7 @@ class PHPUnit_Extensions_Database_DataSet_Persistors_MysqlXml extends PHPUnit_Ex
         $this->fh = fopen($this->filename, 'w');
 
         if ($this->fh === FALSE) {
-            throw new PHPUnit_Framework_Exception(
+            throw new PHPUnit\Framework\Exception(
               "Could not open {$this->filename} for writing see " . __CLASS__ . '::setFileName()'
             );
         }

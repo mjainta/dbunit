@@ -1,10 +1,10 @@
 <?php
-class DefaultDatabaseConnectionTest extends PHPUnit_Framework_TestCase
+class DefaultDatabaseConnectionTest extends PHPUnit\Framework\TestCase
 {
     protected $db;
 
-    protected function setUp()
-    {
+    protected function setUp():void
+{
         $this->db = new PDO('sqlite::memory:');
         $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $this->db->exec('CREATE TABLE test (field1 VARCHAR(100))');
